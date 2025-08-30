@@ -1,0 +1,41 @@
+Branch Predictor Simulator:
+
+This project implements a branch predictor simulator to analyze the performance of different branch prediction strategies commonly used in modern processors. The simulator was built in C++ and tested with provided branch trace files.
+
+
+Features:
+
+Bimodal Predictor: Implements a simple table of 2-bit saturating counters indexed by branch PC.
+
+Gshare Predictor: Extends the design with a global branch history register, XORed with PC bits for improved accuracy.
+
+Hybrid Predictor (Advanced): Combines bimodal and gshare predictors using a chooser table to dynamically select the best predictor for each branch.
+
+
+Functionality:
+
+Reads trace files containing branch instruction addresses and outcomes (taken / not taken).
+
+Simulates predictions, updates predictor state, and tracks interference effects.
+
+
+Outputs:
+
+Total predictions
+
+Total mispredictions
+
+Misprediction rate (%)
+
+Final contents of predictor tables
+
+
+Key Learnings
+
+Gained hands-on experience with performance modeling and branch predictor design.
+
+Practiced bitwise manipulation (shift, mask, XOR) for efficient hardware simulation.
+
+Learned how predictor parameters (PC bits, history length, chooser size) affect prediction accuracy.
+
+Balanced correctness and efficiency to handle large trace files within runtime limits.
